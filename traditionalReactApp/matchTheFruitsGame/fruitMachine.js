@@ -6,7 +6,8 @@ class Fruitmachine extends React.Component{
         return(
             <div>
                 <h2>{f1} {f2} {f3}</h2>
-                <h3>{result ? 'You Win!!' : 'You Lose!!'}</h3>
+                <h3 className={result ? 'greenC' : 'redC'}>{result ? 'You Win!!' : 'You Lose!!'}</h3>
+                
             </div>
         )
     }

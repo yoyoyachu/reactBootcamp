@@ -1,0 +1,12 @@
+body{
+}
+.greenC{
+    font-size: 40px;
+    background-color: rgba(150, 250, 0, 0.5);
+    
+}
+.redC{
+    font-size: 20px;
+    background-color: rgb(255, 73, 73);
+    
+}
