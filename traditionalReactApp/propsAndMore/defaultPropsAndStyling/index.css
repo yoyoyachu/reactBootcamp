@@ -1,0 +1,11 @@
+.Hello{
+    border: 1px black solid;
+}
+.greenC{
+    background-color: 'Green';
+    color:'pink';
+}
+.redC{
+    background-color: 'red';
+    color:'brown';
+}

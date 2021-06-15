@@ -5,6 +5,7 @@ class Hello extends React.Component{
         return(
             <div>
                 <h2>Hello {to} from {from}{star}</h2>
+                <img src={this.props.img} alt="img" />
             </div>
         )
     }
