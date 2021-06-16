@@ -8,8 +8,10 @@ class Pokecard extends Component{
         const imgSrc = `${poke_api}${padtoThree(id)}.png`;
         return(
                 <div className="pokecard">
-                    <h2 className="pokecard-name">{name}</h2>
-                    <img src={imgSrc} alt={name} />
+                    <h2 className="pokecard-title">{name}</h2>
+                    <div className="pokecard-image">
+                        <img src={imgSrc} alt={name} />
+                    </div>
                     <p className="pokecard-data">{type}</p>
                     <p className="pokecard-data">{exp}</p>
                 </div>
