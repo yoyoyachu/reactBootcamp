@@ -7,7 +7,6 @@ class Game extends Component{
             gameOver: false
         }
     }
-    
     render(){
         return(
             <div>
