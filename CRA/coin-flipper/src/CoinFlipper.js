@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Coin from './Coin';
 import './coinFlipper.css';
+
 class CoinFlipper extends Component {
     static defaultProps = {
         //array of images of coins
@@ -26,11 +27,11 @@ class CoinFlipper extends Component {
     //when player clicks on Heads btn, this fn assigns heads to player & tails to computer.
     //also winMsg is set to empty string, just to make sure no msg is displayed after the game is over.
     playerHeads = () =>{
-        this.setState({player: 0,computer:1,winMsg:''})
+        this.setState({player: 0,computer:1,winMsg:'',announceMsg:''})
     }
 
     playerTails = () =>{
-        this.setState({player: 1,computer:0,winMsg:''})
+        this.setState({player: 1,computer:0,winMsg:'',announceMsg:''})
     }
 
     sides = ()=>{
@@ -78,7 +79,7 @@ class CoinFlipper extends Component {
 
         return (
             <div className="container">
-                <h1 className="text-center p-5">First Player to 3 Points Win!</h1>
+                <h1 className="text-center p-5">3 Points Coin Toss!</h1>
                 <h1>{this.state.winMsg}</h1>
                 <div className="card">
                     <Coin side={this.state.sideImg} className="card-img-top"/>
@@ -117,3 +118,6 @@ class CoinFlipper extends Component {
 }
  
 export default CoinFlipper;
+
+
+//image credits: https://github.com/JS-Beginners/coin-toss-game-2
