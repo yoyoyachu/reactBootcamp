@@ -1,34 +1,32 @@
 import React, {Component } from 'react';
 import './colorBox.css';
+import {choice} from './helper';
 
 class ColorBox extends Component {
     constructor(props) {
         super(props);
-        this.state = {  
+        this.state = {
+            color: choice(),
 
         }
     }
-    createColor = ()=>{
-        const r = Math.floor(Math.random()* 255);
-        const g = Math.floor(Math.random()* 255);
-        const b = Math.floor(Math.random()* 255);
-        const a =  Math.random().toFixed(1) ;
+    pickColor = () =>{
+        let newColor;
+        do{
+            newColor = choice()
+        }while(newColor === this.state.color);
 
-        return `rgba(${r}, ${g}, ${b},${a})`;
+        this.setState({color : newColor})
     }
-    generateColor = ()=>{
-        this.createColor();
-    }
-    changeColor = () =>{
-        
-    
-          
+    handleClick = ()=>{
+        this.pickColor();
     }
     render() { 
         
         return (  
             <div>
-                <div onClick={this.changeColor} className="color-box"></div>
+                <p>{this.state.color}</p>
+                <div style={{backgroundColor:this.state.color}} onClick={this.handleClick} className="color-box"></div>
             </div>
         );
     }
