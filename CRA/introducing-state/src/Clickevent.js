@@ -20,7 +20,6 @@ class Clickevent extends Component {
                 <button onClick={this.handleClick}>
                     Click me!
                 </button>
-                
             </div>
             
         );

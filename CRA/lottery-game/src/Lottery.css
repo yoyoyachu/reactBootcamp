@@ -1,3 +1,4 @@
+
 .Lottery {
   border: solid 2px gray;
   padding: 1em 0 2em 0;
@@ -5,6 +6,7 @@
   margin: 1em auto auto;
   border-radius: 10px;
   width: 60em;
+  /* background-color: rgb(153, 153, 153); */
 }
   
 .Lottery button {

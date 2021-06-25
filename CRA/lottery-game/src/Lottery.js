@@ -10,7 +10,7 @@ class Lottery extends Component {
     constructor(props) {
         super(props);
         this.state = {  
-            nums:Array.from({length:this.props.maxBalls})
+            nums:(Array.from({length:this.props.maxBalls}))
         }
     }
     generate =()=>{
