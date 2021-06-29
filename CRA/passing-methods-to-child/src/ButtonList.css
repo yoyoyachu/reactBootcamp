@@ -1,0 +1,12 @@
+.btn-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+.btn{
+    margin: 4%;
+    width: 100px;
+    width: 100px;
+}
