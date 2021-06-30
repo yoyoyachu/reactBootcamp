@@ -17,12 +17,17 @@ class Click extends Component {
     syntheticE = (e)=>{
         console.log(this)
     }
+    toggleEvent = (e)=>{
+        this.setState(prevState=>({
+            isToggleOn: !prevState.isToggleOn,
+        }))
+    }
     render() { 
         return (  
             <div>
+                <button onToggle={this.toggleEvent}>{(this.state.isToggleOn) ? 'Hi' : 'Bye'}</button>
                 <button onClick={this.clickEvent}>{(this.state.isToggleOn) ? 'On' : 'Off'}</button>
                 <button onClick={this.syntheticE}>hi</button>
-
             </div>
         );
     }
