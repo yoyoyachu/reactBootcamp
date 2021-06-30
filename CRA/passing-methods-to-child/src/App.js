@@ -1,10 +1,14 @@
 import './App.css';
-import ButtonList from './ButtonList'
+// import ButtonList from './ButtonList'
+import NumberList from './NumberList'
+import BetterNumList from './BetterNumList'
 
 function App() {
   return (
     <div className="App">
-      <ButtonList />
+      {/* <ButtonList /> */}
+      <NumberList />
+      <BetterNumList />
     </div>
   );
 }
