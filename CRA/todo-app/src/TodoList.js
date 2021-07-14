@@ -25,11 +25,11 @@ class TodoList extends Component {
       todos: this.state.todos.filter(t => t.id !== id)
     });
   }
-  componentDidUpdate(prevProps,prevState){
-    console.log(prevState.todos)
-    console.log('in componentDidUpdate');
-    console.log(this.state.todos)
-  }
+  // componentDidUpdate(prevProps,prevState){
+  //   console.log(prevState.todos)
+  //   console.log('in componentDidUpdate');
+  //   console.log(this.state.todos)
+  // }
 
   update(id, updatedTask) {
     const updatedTodos = this.state.todos.map(todo => {
