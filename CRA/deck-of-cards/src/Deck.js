@@ -39,7 +39,6 @@ class Deck extends Component {
         }catch(err){
             alert(err)
         }
-        
     }
     render() { 
         const cards = this.state.drawn.map(c=>(
