@@ -1,15 +1,24 @@
 import React,{Component} from 'react';
-import {Link,Switch,Route} from 'react-router-dom';
+import {Link,Switch,Route, Redirect} from 'react-router-dom';
+import DogDetails from './DogDetails';
+import DogList from './DogList';
 import './Routes.css';
 
 class Routes extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
     render() { 
+        let getDog = props =>{
+            let name = props.match.params.name;
+            let currentDog = this.props.dogs.find(
+              dog => dog.name.toLowerCase() === name.toLowerCase()
+            );
+            return <DogDetails dog={currentDog} {...props}/>
+          }
         return (  
-            <h1>hi</h1>
+            <Switch>
+            <Route exact path="/dogs" render={()=><DogList dogs={this.props.dogs}/>}/>
+            <Route exact path="/dogs/:name" render={getDog}/>
+            <Redirect to="/dogs"/>
+          </Switch>
         );
     }
 }
